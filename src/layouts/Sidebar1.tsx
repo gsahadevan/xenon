@@ -4,6 +4,7 @@ import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 export const Sidebar = (): JSX.Element => {
     return (
         <aside className='z-30 flex-shrink-0 hidden w-64 overflow-y-auto md:block shadow-lg'>
+            {/**
             <div>
                 <div className='px-6 py-4 border-b flex justify-between content-center'>
                     <span className='text-lg font-bold'>Xenon</span>
@@ -56,6 +57,7 @@ export const Sidebar = (): JSX.Element => {
                     </li>
                 </ul>
             </div>
+            */}
         </aside>
     );
 };
