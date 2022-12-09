@@ -9,10 +9,10 @@ export const Notifications = (): JSX.Element => {
                 <div>
                     <Menu.Button className='relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple'>
                         <span className='sr-only'>Open notifications menu</span>
-                        <BellIcon className='w-5 h-5' aria-hidden='true' />
+                        <BellIcon className='w-5 h-5 text-white' aria-hidden='true' />
                         <span
                             aria-hidden='true'
-                            className='absolute animation-ping top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-pink-500 border-2 border-white rounded-full'></span>
+                            className='absolute animation-ping top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-pink-500 border-2 border-indigo-600 rounded-full'></span>
                     </Menu.Button>
                 </div>
                 <Transition

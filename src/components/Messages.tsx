@@ -1,6 +1,6 @@
 import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-import { ChatBubbleLeftIcon } from '@heroicons/react/24/outline/';
+import { ChatBubbleLeftIcon, XMarkIcon } from '@heroicons/react/24/outline/';
 
 export const Messages = (): JSX.Element => {
     const [open, setOpen] = useState(false);
@@ -12,10 +12,10 @@ export const Messages = (): JSX.Element => {
                 onClick={() => {
                     setOpen(open => !open);
                 }}>
-                <ChatBubbleLeftIcon className='w-5 h-5' />
+                <ChatBubbleLeftIcon className='w-5 h-5 text-white' />
                 <span
                     aria-hidden='true'
-                    className='absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-pink-500 border-2 border-white rounded-full'></span>
+                    className='absolute top-0 right-0 inline-block w-3 h-3 transform translate-x-1 -translate-y-1 bg-pink-500 border-2 border-indigo-600 rounded-full'></span>
             </div>
             <Transition.Root show={open} as={Fragment}>
                 <Dialog as='div' className='fixed inset-0 overflow-hidden z-9999' onClose={() => setOpen(false)}>
@@ -28,7 +28,7 @@ export const Messages = (): JSX.Element => {
                             leave='ease-in-out duration-500'
                             leaveFrom='opacity-100'
                             leaveTo='opacity-0'>
-                            <Dialog.Overlay className='absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity' />
+                            <Dialog.Overlay className='absolute inset-0 bg-opacity-75 transition-opacity' />
                         </Transition.Child>
                         <div className='fixed inset-y-0 right-0 pl-10 max-w-full flex'>
                             <Transition.Child
@@ -40,17 +40,16 @@ export const Messages = (): JSX.Element => {
                                 leaveFrom='translate-x-0'
                                 leaveTo='translate-x-full'>
                                 <div className='relative w-screen max-w-md'>
-                                    <div className='h-full flex flex-col py-6 bg-white dark:bg-gray-900 shadow-xl overflow-y-scroll'>
+                                    <div className='h-full flex flex-col py-6 bg-white shadow-xl overflow-y-scroll'>
                                         <div className='px-4 sm:px-6'>
                                             <div className='flex justify-between mb-4'>
-                                                <Dialog.Title className='text-lg font-medium text-gray-900 dark:text-gray-100'>
-                                                    Panel title
-                                                </Dialog.Title>
+                                                <Dialog.Title className='text-lg font-medium'>Panel title</Dialog.Title>
                                                 <button
-                                                    className='text-gray-900 dark:text-gray-100 focus:outline-none px-2 py-1'
+                                                    className='text-gray-900 focus:outline-none px-2 py-1'
                                                     onClick={() => {
                                                         setOpen(open => !open);
                                                     }}>
+                                                    <XMarkIcon className='h-6 w-6' aria-hidden='true' />
                                                     <span className='sr-only'>Close panel</span>
                                                 </button>
                                             </div>
