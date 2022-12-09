@@ -1,9 +1,7 @@
-// import React from "react";
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import Dashboard from './pages/Dashboard';
-import Error from './pages/Error';
-import DefaultLayout from './layouts/DefaultLayout';
+import { DefaultLayout } from './layouts/DefaultLayout';
+import { CallToActions, Dashboard, Error, HeaderBanner, Layout, Navbars } from './pages';
 
 function App() {
     return (
@@ -12,6 +10,10 @@ function App() {
                 <Route index element={<Dashboard />}></Route>
                 <Route path='dashboard' element={<Dashboard />}></Route>
                 <Route path='error' element={<Error />}></Route>
+                <Route path='cta' element={<CallToActions />}></Route>
+                <Route path='banner' element={<HeaderBanner />}></Route>
+                <Route path='layout' element={<Layout />}></Route>
+                <Route path='navbars' element={<Navbars />}></Route>
             </Route>
         </Routes>
     );
