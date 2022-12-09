@@ -1,13 +1,16 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronLeftIcon } from '@heroicons/react/24/outline';
 
 export const Sidebar = (): JSX.Element => {
     return (
-        <aside className='z-30 flex-shrink-0 hidden w-64 overflow-y-auto lg:block shadow-lg'>
-            <div className='py-4'>
-                <a className='ml-6 text-lg font-bold' href='/dashboard'>
-                    Xenon
-                </a>
+        <aside className='z-30 flex-shrink-0 hidden w-64 overflow-y-auto md:block shadow-lg'>
+            <div>
+                <div className='px-6 py-4 border-b flex justify-between content-center'>
+                    <span className='text-lg font-bold'>Xenon</span>
+                    <button className='rounded-md focus:outline-none focus:shadow-outline' aria-label='Menu'>
+                        <ChevronLeftIcon className='w-5 h-5' aria-hidden='true' />
+                    </button>
+                </div>
                 <ul className='mt-6'>
                     <li className='px-2 py-1 items-center'>
                         <Link to='/dashboard'>

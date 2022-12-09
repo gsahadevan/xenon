@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Transition } from '@headlessui/react';
 import avatar from '../assets/images/profile.jpg';
+import { UserIcon, Cog6ToothIcon, ArrowRightOnRectangleIcon } from '@heroicons/react/24/outline';
 
 export const Profile = (): JSX.Element => {
     return (
@@ -10,7 +11,7 @@ export const Profile = (): JSX.Element => {
                 <div>
                     <Menu.Button className='flex text-sm rounded-full focus:outline-none'>
                         <span className='sr-only'>Open user menu</span>
-                        <img className='h-8 w-8 rounded-full' src={avatar} alt='User Avatar' />
+                        <img className='h-7 w-7 rounded-full' src={avatar} alt='User Avatar' />
                     </Menu.Button>
                 </div>
                 <Transition
@@ -26,6 +27,7 @@ export const Profile = (): JSX.Element => {
                             <a href='/dashboard' className='block px-2 py-1 text-sm'>
                                 <Link to='/error'>
                                     <div className='text-sm px-2 py-1 flex items-center hover:bg-gray-100 rounded'>
+                                        <UserIcon className='w-4 h-4 mr-2' />
                                         <span>Profile</span>
                                     </div>
                                 </Link>
@@ -35,6 +37,7 @@ export const Profile = (): JSX.Element => {
                             <a href='/dashboard' className='block px-2 py-1 text-sm'>
                                 <Link to='/error'>
                                     <div className='text-sm px-2 py-1 flex items-center hover:bg-gray-100 rounded'>
+                                        <Cog6ToothIcon className='w-4 h-4 mr-2' />
                                         <span>Settings</span>
                                     </div>
                                 </Link>
@@ -44,6 +47,7 @@ export const Profile = (): JSX.Element => {
                             <a href='/error' className='block px-2 py-1 text-sm'>
                                 <Link to='/error'>
                                     <div className='text-sm px-2 py-1 flex items-center hover:bg-gray-100 rounded'>
+                                        <ArrowRightOnRectangleIcon className='w-4 h-4 mr-2' />
                                         <span>Sign out</span>
                                     </div>
                                 </Link>
