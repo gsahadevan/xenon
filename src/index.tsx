@@ -5,17 +5,14 @@ import { BrowserRouter } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { SidebarSettingsProvider } from './contexts/SidebarSettings';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
     <React.StrictMode>
         <ThemeSettingsProvider initialTheme={undefined}>
-            <SidebarSettingsProvider>
-                <BrowserRouter>
-                    <App />
-                </BrowserRouter>
-            </SidebarSettingsProvider>
+            <BrowserRouter>
+                <App />
+            </BrowserRouter>
         </ThemeSettingsProvider>
     </React.StrictMode>
 );
