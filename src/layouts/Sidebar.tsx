@@ -5,28 +5,28 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline/';
 
 const sidebarMenu = [
     {
-        link: '/dashboard',
-        text: 'Dashboard',
+        href: '/dashboard',
+        name: 'Dashboard',
     },
     {
-        link: '/error',
-        text: 'Error',
+        href: '/error',
+        name: 'Error',
     },
     {
-        link: '/cta',
-        text: 'CTA Samples',
+        href: '/cta',
+        name: 'CTA Samples',
     },
     {
-        link: '/banner',
-        text: 'Header Banner',
+        href: '/banner',
+        name: 'Header Banner',
     },
     {
-        link: '/layout',
-        text: 'Layout',
+        href: '/layout',
+        name: 'Layout',
     },
     {
-        link: '/navbars',
-        text: 'Navbars',
+        href: '/navbars',
+        name: 'Navbars',
     },
 ];
 
@@ -83,9 +83,9 @@ export const Sidebar = (): JSX.Element => {
                                     <ul>
                                         {sidebarMenu.map(menu => (
                                             <li className='items-center'>
-                                                <Link to={menu.link}>
+                                                <Link to={menu.href}>
                                                     <div className='text-sm px-4 py-2 flex items-center hover:bg-gray-100 rounded'>
-                                                        <span>{menu.text}</span>
+                                                        <span>{menu.name}</span>
                                                     </div>
                                                 </Link>
                                             </li>
